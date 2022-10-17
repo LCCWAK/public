@@ -1,0 +1,137 @@
+:root{
+	--moonGray1: #3e4043;
+	--moonGray1Dark: #292b2d;
+	--moonBlue1: #edab3b;
+	--moonBlue1Dark: #bd8422;
+	--gray1: #595c62;
+}
+
+body{
+	background-color: #0f1011;
+  font-family: Arial;
+}
+
+.bigDiv{
+  background-color: var(--moonGray1Dark);
+}
+
+.banner{
+  background-color: var(--moonGray1);
+	background-image: url("pictures/cat_smol.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top left;
+	color: white;
+}
+
+.banner h1{
+	font-family: 'Kunstler Script';
+	font-size: 60px;
+	color: var(--moonBlue1);
+}
+
+.menu nav{
+  background-color: var(--moonGray1);
+}
+
+.menu div{
+	border-top: 2px solid var(--moonGray1Dark);
+}
+.menu div:nth-child(1){
+	border-bottom: 0;
+}
+
+a{
+  outline: 0;
+  color: white;
+	font-size: 16px;
+	text-decoration: none;
+}
+a:hover{
+  color: var(--moonBlue1);
+}
+a:active{
+  color: var(--moonBlue1Dark);
+}
+
+.content .contentDiv{
+  background-color: var(--moonGray1);
+}
+
+.content article{
+	border-bottom: 10px solid var(--moonGray1Dark);
+	color: white;
+}
+.content article:nth-last-child(1){
+	border-bottom: 0;
+}
+
+.content h2{
+	font-size: 30px;
+	color: var(--moonBlue1);
+	font-weight: normal;
+}
+
+.content hr{
+	border: 1px solid var(--moonGray1Dark);
+}
+
+.blue{
+	color: var(--moonBlue1);
+}
+
+#about img{
+	border: 2px solid var(--moonGray1Dark);
+}
+
+#offer table{
+	border: 1px solid var(--moonGray1Dark);
+	border-spacing: 0;
+}
+#offer th, #offer td{
+	border: 1px solid var(--moonGray1Dark);
+	padding: 10px;
+}
+#offer tr td:nth-child(1){
+	font-weight: bold;
+	text-align: center;
+}
+#offer tr td:nth-child(3){
+	text-align: center;
+}
+#offer tr td:nth-child(4){
+	background-color: white;
+	/*padding: 10px;*/
+}
+
+#works div div{
+	border: 2px solid var(--moonGray1Dark);
+}
+
+#links li{
+	color: var(--moonBlue1);
+}
+
+#links ul{
+	margin: 0;
+  padding: 0 17px;
+}
+
+#links li{
+	margin: 10px 0;
+}
+
+footer{
+  background-color: var(--moonGray1);
+	color: var(--gray1);
+}
+
+@media only screen and (max-width: 1000px){
+	.menu div{
+		border-top: 0;
+		border-left: 2px solid var(--moonGray1Dark);
+	}
+	.menu div:nth-child(1){
+		border-left: 0;
+	}
+}

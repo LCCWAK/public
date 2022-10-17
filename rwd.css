@@ -1,0 +1,200 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.bigDiv{
+  margin: 0 auto;
+  width: 1500px;
+  overflow: hidden;
+}
+
+.banner{
+  width: 100%;
+  text-align: center;
+	padding: 10px 0 15px 0;
+}
+
+.banner h1{
+  margin: 0;
+}
+
+.menu{
+  width: 16%;
+  margin: 10px 1% 10px 1%;
+  overflow: hidden;
+  float: left;
+}
+
+.menu nav{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu div{
+	padding: 8px;
+}
+
+.content{
+  width: 64%;
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+  float: left;
+}
+
+.content .contentDiv{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content article{
+  padding: 20px 2%;
+	overflow: hidden;
+}
+.content article:nth-last-child(1){
+	padding-bottom: 0;
+}
+
+.content h2{
+	margin: 0;
+}
+
+#about div{
+	float: left;
+	width: 70%;
+}
+
+#about img{
+	float: left;
+	margin-left: 5%;
+	width: 20%;
+}
+
+#offer table{
+	margin: 10px 0;
+	width: 100%;
+}
+#offer th:nth-child(1){
+	width: 15%;
+}
+#offer th:nth-child(2){
+	width: 50%;
+}
+#offer th:nth-child(3){
+	width: 10%;
+}
+#offer th:nth-child(4){
+	width: 25%;
+}
+#offer tr td:nth-child(4){
+}
+
+#offer img{
+	width: 100%;
+}
+
+#works div{
+	text-align: center;
+  display: inline-block;
+}
+
+#works div div{
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+#works img{
+	width: 100%;
+}
+
+#links div{
+	overflow: hidden;
+	float: left;
+}
+#links img{
+	width: 200px;
+	float: right;
+	margin-right: 10%;
+}
+
+.catGirl{
+  width: 16%;
+  margin: 10px 1% 10px 1%;
+  overflow: hidden;
+  float: left;
+}
+
+.catGirl aside{
+  width: 150px;
+  height: 450px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: var(--moonGray1);
+  background-image: url("pictures/adBig.png");
+  background-size: 150px 450px;
+  background-repeat: no-repeat;
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  clear: left;
+	padding: 10px 0;
+}
+
+@media only screen and (max-width: 1500px){
+	.bigDiv{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	.bigDiv{
+		min-width: 500px;
+	}
+
+	.menu{
+    clear: left;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+	.menu nav{
+    text-align: center;
+		width: 98%;
+		margin: 0 1%;
+  }
+
+	.menu div{
+		display: inline-block;
+	}
+
+	.content{
+    clear: left;
+    width: 98%;
+    margin: 0 1%;
+  }
+
+	.catGirl{
+    clear: left;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+	.catGirl aside{
+    width: 450px;
+    height: 150px;
+    background-image: url("pictures/adSmall.png");
+    background-size: 450px 150px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .catGirl aside{
+    width: 300px;
+    height: 100px;
+    background-size: 300px 100px;
+  }
+}
