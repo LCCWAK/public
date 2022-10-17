@@ -25,7 +25,7 @@ body{
 }
 
 .banner h1{
-	font-family: 'Kunstler Script';
+	font-family: 'Kunstler Script', Arial;
 	font-size: 60px;
 	color: var(--moonBlue1);
 }
