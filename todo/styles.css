@@ -1,0 +1,315 @@
+:root {
+  --moonGray1: #3e4043;
+  --moonGray1Dark: #292b2d;
+  --moonOrange1: #edab3b;
+  --moonOrange1Dark: #bd8422;
+  --gray1: #595c62;
+  --green1: #4be214;
+}
+
+body {
+  background-color: #0f1011;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.bigDiv{
+	background-color: var(--moonGray1Dark);
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.banner {
+  background-color: var(--moonGray1);
+  background-image: url("cat_smol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 10px solid var(--moonGray1Dark);
+}
+
+.banner h1{
+	font-size: 50px;
+	color: var(--moonOrange1);
+	margin: 0;
+	text-align: center;
+}
+
+section{
+  padding: 20px 2%;
+  overflow: hidden;
+  background-color: var(--moonGray1);
+  border-bottom: 10px solid var(--moonGray1Dark);
+  color: white;
+}
+
+section h2{
+  font-size: 30px;
+  color: var(--moonOrange1);
+  font-weight: normal;
+  margin: 0;
+}
+
+section hr{
+  border: 1px solid var(--moonGray1Dark);
+}
+
+.content{
+  width: 100%;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+#addName, #addDate, #searchName{
+  float: left;
+  padding: 0 6px 0 9px;
+  border-radius: 5px;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  height: 25px;
+  font-size: 15px;
+  font-family: Arial;
+}
+#addName:focus, #addDate:focus, #searchName:focus{
+  border: 2px solid var(--moonOrange1);
+}
+
+#addName{
+  width: 672px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#addDate{
+  width: 117px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: 2px;
+}
+#searchName{
+  padding: 0 9px;
+  width: 807px;
+  margin-bottom: 18px;
+}
+
+#addButton, #searchButton{
+  float: right;
+  border-radius: 5px;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  height: 29px;
+  width: 111px;
+  font-size: 15px;
+  font-family: Arial;
+  cursor: pointer;
+  font-weight: bold;
+}
+#addButton:hover, #searchButton:hover{
+  border: 2px solid var(--moonOrange1);
+}
+#addButton:active, #searchButton:active{
+  border: 2px solid var(--moonOrange1Dark);
+  color: #dedede;
+}
+
+.columnNames{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.columnNames div{
+  float: left;
+  border: 2px solid var(--moonGray1Dark);
+  border-left: 0;
+  height: 18px;
+  padding: 7px 0;
+}
+.columnNames div:nth-child(1){
+  width: 689px;
+  border-left: 2px solid var(--moonGray1Dark);
+}
+.columnNames div:nth-child(2){
+  width: 136px;
+}
+.columnNames div:nth-child(3){
+  width: 127px;
+}
+
+.scrollDiv{
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: var(--moonGray1Dark);
+  height: 400px;
+}
+
+.table{
+  border: 1px solid var(--moonGray1);
+  border-left: 0;
+  border-right: 0;
+}
+
+.row{
+  border: 1px solid var(--moonGray1);
+  border-left: 0;
+  border-right: 0;
+  background-color: var(--moonGray1Dark);
+  overflow: hidden;
+}
+
+.rightBorder{
+  float: left;
+  border-right: 2px solid var(--moonGray1);
+  overflow: hidden;
+  background-color: var(--moonGray1Dark);
+}
+
+.rowNameEditHolder{
+  float: left;
+  width: 691px;
+  border-right: 2px solid var(--moonGray1);
+}
+
+.rowNameEdit{
+    float: left;
+    padding: 0 7px 0 7px;
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    height: 25px;
+    width: 672px;
+    font-family: Arial;
+    outline: none;
+    border: 2px solid var(--moonGray1Dark);
+    background-color: var(--moonGray1Dark);
+}
+.rowNameEdit:focus{
+  border: 2px solid var(--moonOrange1);
+}
+
+.rowName{
+  float: left;
+  padding: 5px 6px 6px 9px;
+  width: 676px;
+  color: white;
+  font-size: 15px;
+  word-wrap: break-word;
+  cursor: pointer;
+  border-right: 2px solid var(--moonGray1);
+}
+
+.rowDate{
+  float: left;
+  margin-left: 2px;
+  width: 120px;
+  padding-top: 1px;
+  height: 26px;
+  line-height: 27px;
+  padding-left: 14px;
+  font-size: 15px;
+}
+
+.rowButtonHolder{
+  float: left;
+  text-align: center;
+  width: 112px;
+  padding-top: 1px;
+  height: 26px;
+  line-height: 27px;
+  font-size: 15px;
+}
+
+.rowButton{
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--moonOrange1);
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rowButton:active{
+  color: var(--moonOrange1Dark);
+}
+
+/*
+
+.rowName{
+  margin-top: 0;
+  float: left;
+  border: 0;
+  padding: 0 6px 0 9px;
+  width: 672px;
+  border-radius: 0;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  height: 23px;
+  font-size: 15px;
+  font-family: Arial;
+}
+.rowName:focus{
+  border: 2px solid var(--moonOrange1);
+}
+
+.rowDate{
+  float: left;
+  margin-left: 2px;
+  width: 121px;
+  height: 27px;
+  line-height: 27px;
+  padding-left: 14px;
+  padding-right: 1px;
+  font-size: 15px;
+  background-color: var(--moonGray1Dark);
+}
+
+.rowButton{
+  float: left;
+  width: 112px;
+  height: 27px;
+  margin-left: 2px;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  font-size: 15px;
+  font-family: Arial;
+  cursor: pointer;
+  font-weight: bold;
+}
+.rowButton:hover{
+  border: 2px solid var(--moonOrange1);
+}
+.rowButton:active{
+  border: 2px solid var(--moonOrange1Dark);
+  color: #dedede;
+}
+*/
+
+
+.green{
+  background-color: var(--green1);
+}
+
+footer{
+  background-color: var(--moonGray1);
+  color: var(--gray1);
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}

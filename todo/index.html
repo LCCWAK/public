@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<head>
+		<title>TODO list</title>
+		<meta name="author" content="Michał Rymer">
+		<meta charset="utf-8">
+		<meta name="google" content="notranslate">
+		<link rel="stylesheet" href="styles.css">
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div class="bigDiv">
+			<header class="banner">
+				<h1>TODO list</h1>
+			</header>
+
+			<section>
+				<h2>Add Task</h2>
+				<hr>
+				<div class="content">
+					<input type="text" placeholder="task" id="addName">
+					<input type="date" min="1" max="31" placeholder="day" id="addDate">
+					<button id="addButton" onclick="addTask()">ADD</button>
+				</div>
+			</section>
+
+			<section>
+				<h2>Search Task</h2>
+				<hr>
+				<div class="content">
+					<input type="text" placeholder="task" id="searchName" oninput="searchTasks()">
+					<button id="searchButton" onclick="clearSearch()">CLEAR</button>
+				</div>
+
+				<div class="columnNames">
+					<div>TASK</div>
+					<div>DATE</div>
+					<div></div>
+				</div>
+
+				<div class="scrollDiv">
+					<div class="table" id="list">
+
+					<!--
+						<div class="row" id="item1">
+							<div class="rightBorder" id="item1a">
+
+								<div class="rowNameEditHolder rightBorder" id="item1b">
+									<input type="text" value="AAAasdwasuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyywdgwdwdwdwdwdwdggggggggggggggggggggggggggggggggggggwwwwwwwwwwwwwwwa" class="rowNameEdit" id="item1NameEdit">
+								</div>
+
+								<span class="rowDate">28 . 09 . 2022</span>
+							</div>
+							<div class="rowButtonHolder"><a class="rowButton">DELETE</a></div>
+						</div>
+
+						<div class="row" id="item2">
+							<div class="rightBorder" id="item1a">
+
+								<div class="rowName rightBorder" id="item1Name">
+									AAAasdwasuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyywdgwdwdwdwdwdwd<span class='green'>gggggggggggggggggggggggggggggggggggg</span>wwwwwwwwwwwwwwwa
+								</div>
+
+								<span class="rowDate">28 . 09 . 2022</span>
+							</div>
+							<div class="rowButtonHolder"><a class="rowButton">DELETE</a></div>
+						</div>
+					-->
+
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				Website made by Michał Rymer<br>
+				All rights reserved © 2022
+			</footer>
+		</div>
+	</body>
+</html>
