@@ -29,6 +29,7 @@ function loadTasks(){
   }
 }
 
+//create html element
 function createItem(itemNumber, name, date){
   var row = document.createElement("div");
 	row.classList.add("row");
@@ -206,19 +207,24 @@ function searchTasks(){
   var search = document.getElementById("searchName").value;
   for(i=0; i<items.length; i++){
     task = document.getElementById("item" + items[i] + "NameEdit").value;
-    if(task.toLowerCase().includes(search.toLowerCase())){
-      document.getElementById("item" + items[i]).style.display = "block";
-      var index = task.toLowerCase().indexOf(search.toLowerCase());
-      if (index !== -1) {
-        var endIndex = index + search.length;
-        //console.log(index, endIndex);
-        document.getElementById("item" + items[i] + "Name").innerHTML = task.substr(0, index) + "<span class='green'>" + task.substr(index, endIndex - index) + "</span>" + task.substr(endIndex, task.length - endIndex);
-        //console.log(task.substr(0, index), task.substr(index, endIndex - index), task.substr(endIndex, task.length - endIndex));
+    if(search.length >= 3){
+      if(task.toLowerCase().includes(search.toLowerCase())){
+        document.getElementById("item" + items[i]).style.display = "block";
+        var index = task.toLowerCase().indexOf(search.toLowerCase());
+        if (index !== -1) {
+          var endIndex = index + search.length;
+          //console.log(index, endIndex);
+          document.getElementById("item" + items[i] + "Name").innerHTML = task.substr(0, index) + "<span class='green'>" + task.substr(index, endIndex - index) + "</span>" + task.substr(endIndex, task.length - endIndex);
+          //console.log(task.substr(0, index), task.substr(index, endIndex - index), task.substr(endIndex, task.length - endIndex));
+        }else{
+          document.getElementById("item" + items[i] + "Name").innerHTML = task;
+        }
       }else{
-        document.getElementById("item" + items[i] + "Name").innerHTML = task;
+        document.getElementById("item" + items[i]).style.display = "none";
       }
     }else{
-      document.getElementById("item" + items[i]).style.display = "none";
+      document.getElementById("item" + items[i] + "Name").innerHTML = task;
+      document.getElementById("item" + items[i]).style.display = "block";
     }
   }
 }

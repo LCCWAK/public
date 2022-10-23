@@ -245,63 +245,6 @@ section hr{
   color: var(--moonOrange1Dark);
 }
 
-/*
-
-.rowName{
-  margin-top: 0;
-  float: left;
-  border: 0;
-  padding: 0 6px 0 9px;
-  width: 672px;
-  border-radius: 0;
-  border: 2px solid var(--moonGray1Dark);
-  outline: 0;
-  background-color: var(--moonGray1Dark);
-  color: white;
-  height: 23px;
-  font-size: 15px;
-  font-family: Arial;
-}
-.rowName:focus{
-  border: 2px solid var(--moonOrange1);
-}
-
-.rowDate{
-  float: left;
-  margin-left: 2px;
-  width: 121px;
-  height: 27px;
-  line-height: 27px;
-  padding-left: 14px;
-  padding-right: 1px;
-  font-size: 15px;
-  background-color: var(--moonGray1Dark);
-}
-
-.rowButton{
-  float: left;
-  width: 112px;
-  height: 27px;
-  margin-left: 2px;
-  border: 2px solid var(--moonGray1Dark);
-  outline: 0;
-  background-color: var(--moonGray1Dark);
-  color: white;
-  font-size: 15px;
-  font-family: Arial;
-  cursor: pointer;
-  font-weight: bold;
-}
-.rowButton:hover{
-  border: 2px solid var(--moonOrange1);
-}
-.rowButton:active{
-  border: 2px solid var(--moonOrange1Dark);
-  color: #dedede;
-}
-*/
-
-
 .green{
   background-color: var(--green1);
 }

@@ -40,29 +40,25 @@
 				<div class="scrollDiv">
 					<div class="table" id="list">
 
+					<!--EXAMPLE-->
 					<!--
 						<div class="row" id="item1">
 							<div class="rightBorder" id="item1a">
 
 								<div class="rowNameEditHolder rightBorder" id="item1b">
-									<input type="text" value="AAAasdwasuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyywdgwdwdwdwdwdwdggggggggggggggggggggggggggggggggggggwwwwwwwwwwwwwwwa" class="rowNameEdit" id="item1NameEdit">
+									<input type="text" value="" class="rowNameEdit" id="item1NameEdit" onfocusout="saveTask(1)" style="display: none;">
 								</div>
 
-								<span class="rowDate">28 . 09 . 2022</span>
-							</div>
-							<div class="rowButtonHolder"><a class="rowButton">DELETE</a></div>
-						</div>
-
-						<div class="row" id="item2">
-							<div class="rightBorder" id="item1a">
-
-								<div class="rowName rightBorder" id="item1Name">
-									AAAasdwasuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyywdgwdwdwdwdwdwd<span class='green'>gggggggggggggggggggggggggggggggggggg</span>wwwwwwwwwwwwwwwa
+								<div class="rowName rightBorder" id="item1Name" onclick="editTask(1)" style="display: block;">
+									<span class='green'></span>
 								</div>
 
-								<span class="rowDate">28 . 09 . 2022</span>
+								<span class="rowDate" id="item1Date">28 . 09 . 2022</span>
 							</div>
-							<div class="rowButtonHolder"><a class="rowButton">DELETE</a></div>
+
+							<div class="rowButtonHolder" id="item1ButtonHolder">
+								<a class="rowButton" id="item1Button" onclick="deleteTask(1)">DELETE</a>
+							</div>
 						</div>
 					-->
 
