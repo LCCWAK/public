@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<head>
+		<title>Map puzzle</title>
+		<meta name="author" content="Michał Rymer">
+		<meta charset="utf-8">
+		<meta name="google" content="notranslate">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+		integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+		crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+		<script src="scripts.js"></script>
+		<script src="html2canvas.min.js"></script>
+	</head>
+	<body id="body" onload="loadMap(), loadPuzzleMap(), loadListeners()">
+		<div class="bigDiv">
+			<header class="banner">
+				<h1>Map puzzle</h1>
+			</header>
+
+			<section class="content">
+				<div class="map" id="map">
+				</div>
+
+				<div class="map" id="rasterMapDiv">
+				</div>
+
+				<div class="coordinates">
+					<b>Your coordinates:</b> <span id="coordinates"></span>
+				</div>
+
+				<button class="buttonActive" id="geolocate" onclick="geolocate()">GEOLOCATE</button>
+				<button class="buttonActive" id="raster" onclick="raster()">RASTER</button>
+				<button disabled class="buttonDisabled" id="play" onclick="play()">PUZZLE</button>
+			</section>
+
+			<section class="content">
+				<canvas class="map" id="puzzle" width="460" height="460">
+				</canvas>
+			</section>
+
+			<footer>
+				Website made by Michał Rymer<br>
+				All rights reserved © 2022
+			</footer>
+		</div>
+	</body>
+</html>
