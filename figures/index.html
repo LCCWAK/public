@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 	<head>
-		<script>
-			fetch('./data.json')
-				.then((response) => response.json())
-				.then((json) => console.log(json));
+		<script type="module">
+			import data from './data.json' assert { type: 'JSON' };
+			console.log(data);
 		</script>
 	</head>
 	<body>
