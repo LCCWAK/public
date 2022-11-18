@@ -1,17 +1,7 @@
 {
-    {
-      "id": 1,
-      "name": "figure",
-      "release": "May",
-      "price": 100.10,
-      "currency": "JPY"
-    },
-
-	{
-      "id": 2,
-      "name": "figure2",
-      "release": "May",
-      "price": 10.10,
-      "currency": "USD"
-    }
+"id": 1,
+"name": "figure",
+"release": "May",
+"price": 100.1,
+"currency": "JPY"
 }
