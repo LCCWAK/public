@@ -1,0 +1,185 @@
+:root {
+  --moonGray1: #3e4043;
+  --moonGray1Dark: #292b2d;
+  --moonOrange1: #edab3b;
+  --moonOrange1Dark: #bd8422;
+  --gray1: #595c62;
+  --green1: #4be214;
+}
+
+body {
+  background-color: #0f1011;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.bigDiv{
+  background-color: var(--moonGray1Dark);
+  width: 1600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.banner {
+  background-color: var(--moonGray1);
+  background-image: url("cat_smol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 10px solid var(--moonGray1Dark);
+}
+
+.banner h1{
+  font-size: 50px;
+  color: var(--moonOrange1);
+  margin: 0;
+  text-align: center;
+}
+
+section{
+  padding: 20px 2%;
+  overflow: hidden;
+  background-color: var(--moonGray1);
+  border-bottom: 10px solid var(--moonGray1Dark);
+  color: white;
+}
+
+section h2{
+  font-size: 30px;
+  color: var(--moonOrange1);
+  font-weight: normal;
+  margin: 0;
+}
+
+section hr{
+  border: 1px solid var(--moonGray1Dark);
+}
+
+.content{
+  width: 100%;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+#weather-results-container{
+  width: 100%;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+#weatherHolder{
+  display: none;
+}
+
+#locationInput, #checkButton{
+  float: left;
+  padding: 0 6px 0 9px;
+  border-radius: 5px;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  height: 25px;
+  font-size: 15px;
+  font-family: Arial;
+}
+#locationInput:focus{
+  border: 2px solid var(--moonOrange1);
+}
+
+#locationInput{
+  width: 300px;
+}
+#checkButton{
+  padding: 0 9px;
+  width: 807px;
+  margin-bottom: 18px;
+  margin-left: 2px;
+  float: left;
+  border-radius: 5px;
+  border: 2px solid var(--moonGray1Dark);
+  outline: 0;
+  background-color: var(--moonGray1Dark);
+  color: white;
+  height: 29px;
+  width: 111px;
+  font-size: 15px;
+  font-family: Arial;
+  cursor: pointer;
+  font-weight: bold;
+}
+#checkButton:hover{
+  border: 2px solid var(--moonOrange1);
+}
+#checkButton:active{
+  border: 2px solid var(--moonOrange1Dark);
+  color: #dedede;
+}
+
+.green{
+  background-color: var(--green1);
+}
+
+footer{
+  background-color: var(--moonGray1);
+  color: var(--gray1);
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-block {
+  display: inline-block;
+  width: 190px;
+  height: 150px;
+  background-color: var(--moonGray1Dark);
+  position: relative;
+  margin: 15px auto;
+  text-align: left;
+  overflow: hidden;
+  margin-right: 2px;
+}
+
+.weather-date {
+  width: 185px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+}
+
+.weather-icon {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.weather-temperature {
+  position: absolute;
+  top: 53px;
+  left: 90px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.weather-temperature-feels-like {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+  font-size: 18px;
+}
+
+.weather-description {
+  position: absolute;
+  width: 80px;
+  top: 100px;
+  left: 10px;
+  font-size: 18px;
+}
