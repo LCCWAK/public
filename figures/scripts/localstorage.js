@@ -9,11 +9,11 @@ function loadItems()
 {
   var keys = getLocalstorageKeys();
   var lastDate = "000000";
-  print(keys);
+  console.log(keys);
   for (i = 0; i < keys.length; i++)
   {
     var dataObject = loadLocalstorageItem(keys[i]);
-    print(dataObject);
+    console.log(dataObject);
 
     if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
     {
