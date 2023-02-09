@@ -135,6 +135,7 @@ function clearAll()
 {
   clearLocalstorage();
   clearCookies();
+  clearTable();
 }
 
 
