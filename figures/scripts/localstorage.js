@@ -8,23 +8,21 @@
 function loadItems()
 {
   var keys = getLocalstorageKeys();
-  if (keys != "")
+  var lastDate = "000000";
+  print(keys);
+  for (i = 0; i < keys.length; i++)
   {
-    var lastDate = "000000";
+    var dataObject = loadLocalstorageItem(keys[i]);
+    print(dataObject);
 
-    for (i = 0; i < keys.length; i++)
+    if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
     {
-      var dataObject = loadLocalstorageItem(keys[i]);
-
-      if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
-      {
-        createItemDivider();
-      }
-
-      lastDate = dataObject.year + dataObject.month;
-
-      createItem(keys[i], dataObject);
+      createItemDivider();
     }
+
+    lastDate = dataObject.year + dataObject.month;
+
+    createItem(keys[i], dataObject);
   }
 }
 
