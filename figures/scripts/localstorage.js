@@ -62,7 +62,9 @@ function loadSummaryItems()
         lastDate = dataObject.year + dataObject.month;
       }
     }
-    if ((keys.length != 1) && (loadLocalstorageItem(keys[0]) != null))
+    if ((keys.length == 1) && (loadLocalstorageItem(keys[0]) == null))
+      return;
+    else
     {
       summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
       createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
