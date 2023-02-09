@@ -9,11 +9,9 @@ function loadItems()
 {
   var keys = getLocalstorageKeys();
   var lastDate = "000000";
-  console.log(keys);
   for (i = 0; i < keys.length; i++)
   {
     var dataObject = loadLocalstorageItem(keys[i]);
-    console.log(dataObject);
     if (dataObject != null)
     {
       if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
@@ -64,8 +62,11 @@ function loadSummaryItems()
         lastDate = dataObject.year + dataObject.month;
       }
     }
-    summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
-    createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
+    if ((keys.length != 1) && (loadLocalstorageItem(keys[0]) != null))
+    {
+      summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
+      createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
+    }
   }
 }
 
