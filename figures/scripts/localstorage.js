@@ -14,15 +14,16 @@ function loadItems()
   {
     var dataObject = loadLocalstorageItem(keys[i]);
     console.log(dataObject);
-
-    if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
+    if (dataObject != null)
     {
-      createItemDivider();
+      if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
+      {
+        createItemDivider();
+      }
+      lastDate = dataObject.year + dataObject.month;
+
+      createItem(keys[i], dataObject);
     }
-
-    lastDate = dataObject.year + dataObject.month;
-
-    createItem(keys[i], dataObject);
   }
 }
 
@@ -43,24 +44,26 @@ function loadSummaryItems()
     {
       var dataObject = loadLocalstorageItem(keys[i]);
 
-      if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
+      if (dataObject != null)
       {
-        summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
-        createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
+        if ((parseInt(dataObject.year + dataObject.month) > lastDate) && (i != 0))
+        {
+          summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
+          createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
 
-        monthlyPrices = [];
-        monthlyCurrencies = [];
-        monthlyQuantities = [];
-        monthlyShops = [];
+          monthlyPrices = [];
+          monthlyCurrencies = [];
+          monthlyQuantities = [];
+          monthlyShops = [];
+        }
+        monthlyPrices.push(dataObject.price);
+        monthlyCurrencies.push(dataObject.currency);
+        monthlyQuantities.push(dataObject.quantity);
+        monthlyShops.push(dataObject.shop);
+
+        lastDate = dataObject.year + dataObject.month;
       }
-      monthlyPrices.push(dataObject.price);
-      monthlyCurrencies.push(dataObject.currency);
-      monthlyQuantities.push(dataObject.quantity);
-      monthlyShops.push(dataObject.shop);
-
-      lastDate = dataObject.year + dataObject.month;
     }
-
     summaryData = calculateSummary(monthlyPrices, monthlyCurrencies, monthlyQuantities, monthlyShops);
     createSummaryItem(lastDate.slice(4, 6), lastDate.slice(0, 4), summaryData[0], summaryData[1], summaryData[2], summaryData[3], summaryData[4], summaryData[5]);
   }
