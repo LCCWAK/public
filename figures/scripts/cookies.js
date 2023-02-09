@@ -35,7 +35,6 @@ function getCookie(cname) {
 function checkCookies()
 {
   var cookie = getCookie("visited");
-  console.log(cookie);
   if (cookie != "")
     return true;
   else
