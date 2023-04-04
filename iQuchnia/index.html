@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>iQuchnia - Strona główna</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link rel="icon" href="assets/shibi-chan-logo.png" type="image/gif" sizes="128x128">
+		<link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="css/fontello.css">
+		<script src="scripts.js"></script>
+	</head>
+  <body id="body" onload="scrollResize(), resizeAllMasonryItems(), resizeResize()" onmousedown="hideAllSearchResults(event)">
+    <!-- MAIN BODY -->
+    <div class="mainBody">
+			<!-- MENU -->
+			<div class="menuHolder" id="menuHolder">
+				<div class="menu">
+					<div class="menuLogoHolder" id="menuLogoHolder">
+						<a href="index.html" title="iQuchnia"><img class="menuLogo" id="menuLogo" src="assets/shibi-chan-logo.png"/></a>
+					</div>
+
+					<div class="menuSearchHolder" id="menuSearchHolder">
+						<input class="menuSearchbar" placeholder="Szukaj" id="menuSearchbar"/>
+						<button class="menuSearchButton icon-search-3" id="menuSearchButton" title="Szukaj"/>
+					</div>
+
+					<div class="menuButtonHolder" id="menuAboutButton">
+            <a href="about.html"><button class="menuButton icon-help-1" title="O nas"></button></a>
+          </div>
+				</div>
+			</div>
+
+			<!-- FILTERS -->
+			<div class="filtersHolder" id="filtersHolder">
+				<div class="filters">
+					<div class="filtersContentsHolder" id="filtersContentsHolder">
+						<div class="filtersDivider"></div>
+
+						<div class="filtersContents" id="filtersContents">
+							<div class="filter">
+								<span class="filterTitle">Preferowane Składniki</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj składnik" class="filterSearch" id="ingredientsSearch" onmousedown="showSearchResults(event, 'ingredients')">
+
+									<div class="searchResultsDiv" id="ingredientsSearchResults" onmousedown="showSearchResults(event, 'ingredients')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">SKŁADNIK1</div>
+								<div class="filterTag" title="Usuń">SKŁADNIK2</div>
+								<div class="filterTag" title="Usuń">SKŁADNIK3</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Niechciane Alergeny</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj alergeny" class="filterSearch" id="allergensSearch" onmousedown="showSearchResults(event, 'allergens')">
+
+									<div class="searchResultsDiv" id="allergensSearchResults" onmousedown="showSearchResults(event, 'allergens')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Preferowane Tagi</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj tagi" class="filterSearch" id="tagsSearch" onmousedown="showSearchResults(event, 'tags')">
+
+									<div class="searchResultsDiv" id="tagsSearchResults" onmousedown="showSearchResults(event, 'tags')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">TAG</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Trudność Przepisów</span>
+								<hr>
+								<input type="checkbox" value="latwy" class="filterCheckbox">
+							  <label>Łatwy</label>
+							  <input type="checkbox" value="sredni" class="filterCheckbox">
+							  <label>Średni</label>
+							  <input type="checkbox" value="trudny" class="filterCheckbox">
+							  <label>Trudny</label>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Czas Przyrządzania</span>
+								<hr>
+								<input type="checkbox" value="krotki" class="filterCheckbox">
+							  <label>Krótki</label>
+							  <input type="checkbox" value="sredni" class="filterCheckbox">
+							  <label>Średni</label>
+							  <input type="checkbox" value="dlugi" class="filterCheckbox">
+							  <label>Długi</label>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="filtersDivider"></div>
+
+					<div class="filtersShow" onclick="showFilters()">WYSZUKIWANIE ZAAWANSOWANE</div>
+				</div>
+			</div>
+
+			<!-- RECIPIES -->
+			<div class="recipiesHolder">
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/PASTA.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Makaron z serem</span>
+								<hr>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								<hr>
+								<div class="recipieTag">ŁATWE</div>
+								<div class="recipieTag">SZYBKIE</div>
+								<div class="recipieTag">MAKARON</div>
+								<div class="recipieTag">JARSKIE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SALAD.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Sałatka owocowa</span>
+								<hr>
+								Sałatka od dziadka. Pyszna, zdrowa, kolorowa, owocowa.
+								<hr>
+								<div class="recipieTag">SAŁATKA</div>
+								<div class="recipieTag">OWOCE</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">TANIE</div>
+								<div class="recipieTag">PYSZNE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SANDWITCH.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Kanapka wiosenna</span>
+								<hr>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<hr>
+								<div class="recipieTag">KANAPKA</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">LEKKIE</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/CURRY.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Curry ze łzami i potem front-endowca</span>
+								<hr>
+								Czemu to nie działa T-T
+								<hr>
+								<div class="recipieTag">INDYJSKIE</div>
+								<div class="recipieTag">NIEZDROWE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/PASTA.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Makaron z serem</span>
+								<hr>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								<hr>
+								<div class="recipieTag">ŁATWE</div>
+								<div class="recipieTag">SZYBKIE</div>
+								<div class="recipieTag">MAKARON</div>
+								<div class="recipieTag">JARSKIE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SALAD.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Sałatka owocowa</span>
+								<hr>
+								Sałatka od dziadka. Pyszna, zdrowa, kolorowa, owocowa.
+								<hr>
+								<div class="recipieTag">SAŁATKA</div>
+								<div class="recipieTag">OWOCE</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">TANIE</div>
+								<div class="recipieTag">PYSZNE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SANDWITCH.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Kanapka wiosenna</span>
+								<hr>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<hr>
+								<div class="recipieTag">KANAPKA</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">LEKKIE</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/CURRY.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Curry ze łzami i potem front-endowca</span>
+								<hr>
+								Już działa ' - '
+								<hr>
+								<div class="recipieTag">INDYJSKIE</div>
+								<div class="recipieTag">NIEZDROWE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SANDWITCH.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Kanapka wiosenna</span>
+								<hr>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<hr>
+								<div class="recipieTag">KANAPKA</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">LEKKIE</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SANDWITCH.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Kanapka wiosenna</span>
+								<hr>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<hr>
+								<div class="recipieTag">KANAPKA</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">LEKKIE</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+								<div class="recipieTag">#TAG</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/CURRY.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Curry ze łzami i potem front-endowca</span>
+								<hr>
+								Już działa ' - '
+								<hr>
+								<div class="recipieTag">INDYJSKIE</div>
+								<div class="recipieTag">NIEZDROWE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/PASTA.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Makaron z serem</span>
+								<hr>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								<hr>
+								<div class="recipieTag">ŁATWE</div>
+								<div class="recipieTag">SZYBKIE</div>
+								<div class="recipieTag">MAKARON</div>
+								<div class="recipieTag">JARSKIE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/SALAD.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Sałatka owocowa</span>
+								<hr>
+								Sałatka od dziadka. Pyszna, zdrowa, kolorowa, owocowa.
+								<hr>
+								<div class="recipieTag">SAŁATKA</div>
+								<div class="recipieTag">OWOCE</div>
+								<div class="recipieTag">ZDROWE</div>
+								<div class="recipieTag">TANIE</div>
+								<div class="recipieTag">PYSZNE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="recipieHolder">
+					<a href="recipie.html">
+						<div class="recipie">
+							<div class="recipieImage" style="background-image: url('pictures/PASTA.jpg');">
+								<div class="recipieFoldHolder"><div class="recipieFold"></div></div>
+							</div>
+							<div class="recipieContent">
+								<span class="recipieName">Makaron z serem</span>
+								<hr>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+								<hr>
+								<div class="recipieTag">ŁATWE</div>
+								<div class="recipieTag">SZYBKIE</div>
+								<div class="recipieTag">MAKARON</div>
+								<div class="recipieTag">JARSKIE</div>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+    </div>
+
+		<!-- SIDE BODY -->
+		<div class="sideBody"></div>
+		<div class="sideBody2" id="sideBody2"></div>
+  </body>
+</html>

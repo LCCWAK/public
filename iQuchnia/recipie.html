@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>iQuchnia - Strona główna</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+		<link rel="icon" href="assets/shibi-chan-logo.png" type="image/gif" sizes="128x128">
+		<link href='https://fonts.googleapis.com/css?family=Amita' rel='stylesheet'>
+		<link rel="stylesheet" href="recipie-styles.css">
+		<link rel="stylesheet" href="css/fontello.css">
+		<script src="recipie-scripts.js"></script>
+	</head>
+  <body id="body" onload="scrollResize(), resizeResize()" onmousedown="hideAllSearchResults(event)">
+    <!-- MAIN BODY -->
+    <div class="mainBody">
+			<!-- MENU -->
+			<div class="menuHolder" id="menuHolder">
+				<div class="menu">
+					<div class="menuLogoHolder" id="menuLogoHolder">
+						<a href="index.html" title="iQuchnia"><img class="menuLogo" id="menuLogo" src="assets/shibi-chan-logo.png"/></a>
+					</div>
+
+					<div class="menuSearchHolder" id="menuSearchHolder">
+						<input class="menuSearchbar" placeholder="Szukaj" id="menuSearchbar"/>
+						<button class="menuSearchButton icon-search-3" id="menuSearchButton" title="Szukaj"/>
+					</div>
+
+          <div class="menuButtonHolder" id="menuAboutButton">
+            <a href="about.html"><button class="menuButton icon-help-1" title="O nas"></button></a>
+          </div>
+				</div>
+			</div>
+
+			<!-- FILTERS -->
+			<div class="filtersHolder" id="filtersHolder">
+				<div class="filters">
+					<div class="filtersContentsHolder" id="filtersContentsHolder">
+						<div class="filtersDivider"></div>
+
+						<div class="filtersContents" id="filtersContents">
+							<div class="filter">
+								<span class="filterTitle">Preferowane Składniki</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj składnik" class="filterSearch" id="ingredientsSearch" onmousedown="showSearchResults(event, 'ingredients')">
+
+									<div class="searchResultsDiv" id="ingredientsSearchResults" onmousedown="showSearchResults(event, 'ingredients')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">SKŁADNIK1</div>
+								<div class="filterTag" title="Usuń">SKŁADNIK2</div>
+								<div class="filterTag" title="Usuń">SKŁADNIK3</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Niechciane Alergeny</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj alergeny" class="filterSearch" id="allergensSearch" onmousedown="showSearchResults(event, 'allergens')">
+
+									<div class="searchResultsDiv" id="allergensSearchResults" onmousedown="showSearchResults(event, 'allergens')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+								<div class="filterTag" title="Usuń">ALERGEN</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Preferowane Tagi</span>
+								<hr>
+								<div class="inlineElementHolder">
+									<input type="text" placeholder="Wyszukaj tagi" class="filterSearch" id="tagsSearch" onmousedown="showSearchResults(event, 'tags')">
+
+									<div class="searchResultsDiv" id="tagsSearchResults" onmousedown="showSearchResults(event, 'tags')">
+										<div class="searchResult">tag1</div>
+										<div class="searchResult">tag2</div>
+										<div class="searchResult">tag3</div>
+										<div class="searchResult">tag4</div>
+										<div class="searchResult">tag5</div>
+										<div class="searchResult">asd</div>
+										<div class="searchResult">abac</div>
+										<div class="searchResult">aaa1</div>
+										<div class="searchResult">aaa2</div>
+										<div class="searchResult">aaaa3</div>
+									</div>
+								</div>
+								<hr>
+								<div class="filterTag" title="Usuń">TAG</div>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Trudność Przepisów</span>
+								<hr>
+								<input type="checkbox" value="latwy" class="filterCheckbox">
+							  <label>Łatwy</label>
+							  <input type="checkbox" value="sredni" class="filterCheckbox">
+							  <label>Średni</label>
+							  <input type="checkbox" value="trudny" class="filterCheckbox">
+							  <label>Trudny</label>
+							</div>
+
+							<div class="filter">
+								<span class="filterTitle">Czas Przyrządzania</span>
+								<hr>
+								<input type="checkbox" value="krotki" class="filterCheckbox">
+							  <label>Krótki</label>
+							  <input type="checkbox" value="sredni" class="filterCheckbox">
+							  <label>Średni</label>
+							  <input type="checkbox" value="dlugi" class="filterCheckbox">
+							  <label>Długi</label>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="filtersDivider"></div>
+
+					<div class="filtersShow" onclick="showFilters()">WYSZUKIWANIE ZAAWANSOWANE</div>
+				</div>
+			</div>
+
+			<!-- RECIPIE -->
+
+      <!-- DESKTOP -->
+			<div class="recipieHolder">
+        <div class="recipieLeft" id="recipieLeft">
+          <span class="recipieName">Makaron z serem</span>
+          <hr>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          <hr>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><br>
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </div>
+
+        <div class="recipieRight">
+          <div class="page">
+            <div class="pageImage" style="background-image: url('pictures/PASTA.jpg');">
+              <div class="pageFoldHolder"><div class="pageFold"></div></div>
+            </div>
+            <div class="pageList">
+              <div class="pageSection">
+                <div class="pageListThird">30&nbsp;min</div>
+                <div class="pageListThird">4&nbsp;porcje</div>
+                <div class="pageListThird">Trudne</div>
+              </div>
+              <hr>
+              <span class="pageName">Składniki:</span>
+              <hr>
+              <ul>
+                <li>10 pomarańczy</li>
+                <li>20 łyżek soli</li>
+                <li>5 gramów mąki</li>
+              </ul>
+              <hr>
+              <span class="pageName">Alergeny:</span>
+              <hr>
+              <ul>
+                <li>orzechy</li>
+                <li>laktoza</li>
+              </ul>
+              <hr>
+              <span class="pageName">Tagi:</span>
+              <hr>
+              <div class="recipieTag">ŁATWE</div>
+              <div class="recipieTag">SZYBKIE</div>
+              <div class="recipieTag">MAKARON</div>
+              <div class="recipieTag">JARSKIE</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recipieBottom">
+          <span class="galeryName">Galeria</span>
+          <hr>
+          <div class="pageSection">
+            <a href="pictures/PASTA.jpg"><div class="galeryPicture" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+            <a href="pictures/PASTA.jpg"><div class="galeryPicture" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+            <a href="pictures/PASTA.jpg"><div class="galeryPicture" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+          </div>
+        </div>
+			</div>
+
+      <!-- MOBILE -->
+      <div class="recipieHolderMobile">
+        <div class="pageMobile">
+          <div class="pageImage" style="background-image: url('pictures/PASTA.jpg');">
+            <div class="pageFoldHolder"><div class="pageFold"></div></div>
+          </div>
+          <div class="pageList">
+            <div class="pageSection">
+              <div class="pageListThird">30&nbsp;min</div>
+              <div class="pageListThird">4&nbsp;porcje</div>
+              <div class="pageListThird">Trudne</div>
+            </div>
+            <hr>
+            <div class="pageSection">
+              <div class="recipieTag">ŁATWE</div>
+              <div class="recipieTag">SZYBKIE</div>
+              <div class="recipieTag">MAKARON</div>
+              <div class="recipieTag">JARSKIE</div>
+            </div>
+            <hr>
+            <span class="pageName">Makaron z serem</span>
+            <hr>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+            <hr>
+            <span class="pageName">Składniki:</span>
+            <hr>
+            <ul>
+              <li>10 pomarańczy</li>
+              <li>20 łyżek soli</li>
+              <li>5 gramów mąki</li>
+            </ul>
+            <hr>
+            <span class="pageName">Alergeny:</span>
+            <hr>
+            <ul>
+              <li>orzechy</li>
+              <li>laktoza</li>
+            </ul>
+            <hr>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><br>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br><br>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            <hr>
+            <span class="pageName">Galeria:</span>
+            <hr>
+            <div class="pageSection">
+              <a href="pictures/PASTA.jpg"><div class="galeryPictureMobile" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+              <a href="pictures/PASTA.jpg"><div class="galeryPictureMobile" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+              <a href="pictures/PASTA.jpg"><div class="galeryPictureMobile" style="background-image: url('pictures/PASTA.jpg');"></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!-- SIDE BODY -->
+		<div class="sideBody"></div>
+		<div class="sideBody2" id="sideBody2"></div>
+  </body>
+</html>
